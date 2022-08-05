@@ -1,0 +1,17 @@
+<div class="main">
+  <div><b>Current price:  </b><span>{{currentPrice}}</span></div>
+  <hr>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Last prices:</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let price of getHistoricPrices(10)">
+      <td>{{price}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
