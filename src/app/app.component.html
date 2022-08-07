@@ -1,16 +1,27 @@
-<ul ngbNav #nav="ngbNav" class="nav-tabs">
-  <li ngbNavItem>
-    <a ngbNavLink>Price of power</a>
-    <ng-template ngbNavContent><app-powerprice></app-powerprice></ng-template>
-  </li>
-  <li ngbNavItem>
-    <a ngbNavLink>Solar</a>
-    <ng-template ngbNavContent>Solar</ng-template>
-  </li>
-  <li ngbNavItem>
-    <a ngbNavLink>Water influx</a>
-    <ng-template ngbNavContent><div class="main">Water influx</div></ng-template>
-  </li>
-</ul>
-<div [ngbNavOutlet]="nav"></div>
+<ngb-accordion #acc="ngbAccordion" activeIds="two">
+  <ngb-panel title="Group Viewer" id="one">
+    <ng-template ngbPanelContent>
+      <app-statusviewer></app-statusviewer>
+    </ng-template>
+  </ngb-panel>
+  <ngb-panel title="Data Viewer" id="two">
+    <ng-template ngbPanelContent>
+      <ul ngbNav #nav="ngbNav" class="nav-tabs">
+        <li ngbNavItem>
+          <a ngbNavLink>Price of power</a>
+          <ng-template ngbNavContent><app-dataviewer [type]="SourceTypesEnum.POWER"></app-dataviewer></ng-template>
+        </li>
+        <li ngbNavItem>
+          <a ngbNavLink>Solar</a>
+          <ng-template ngbNavContent><app-dataviewer [type]="SourceTypesEnum.SOLAR"></app-dataviewer></ng-template>
+        </li>
+        <li ngbNavItem>
+          <a ngbNavLink>Water influx</a>
+          <ng-template ngbNavContent><app-dataviewer [type]="SourceTypesEnum.WATERINFLUX"></app-dataviewer></ng-template>
+        </li>
+      </ul>
+      <div [ngbNavOutlet]="nav"></div>
+    </ng-template>
+  </ngb-panel>
+</ngb-accordion>
 <router-outlet></router-outlet>

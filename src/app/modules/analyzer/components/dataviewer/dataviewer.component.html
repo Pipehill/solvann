@@ -1,0 +1,17 @@
+<div class="main">
+  <div><b>Current value:  </b><span>{{current | number:digitsInfo}} {{unit}}</span></div>
+  <hr>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Historic values: ({{unit}})</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let value of getHistoric(10)">
+      <td>{{value | number:digitsInfo}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

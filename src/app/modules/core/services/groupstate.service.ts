@@ -9,7 +9,7 @@ import {GroupState} from "../models/groupstate.model";
 export class GroupstateService extends GroupService {
   public baseApiUrl = 'https://solvann.azurewebsites.net/api/GroupState';
 
-  getGroupstate(): Observable<GroupState[]> {
-    return this.http.get<GroupState[]>(this.baseApiUrl + '/', {headers: this.createAuthorizationHeader()}).pipe();
+  getGroupstate(): Observable<GroupState> {
+    return this.http.get<GroupState>(this.baseApiUrl + '/', {headers: this.createAuthorizationHeader()}).pipe();
   }
 }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PowerpriceComponent } from './powerprice.component';
+import { DataviewerComponent } from './dataviewer.component';
 
-describe('PowerpriceComponent', () => {
-  let component: PowerpriceComponent;
-  let fixture: ComponentFixture<PowerpriceComponent>;
+describe('DataviewerComponent', () => {
+  let component: DataviewerComponent;
+  let fixture: ComponentFixture<DataviewerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PowerpriceComponent ]
+      declarations: [ DataviewerComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(PowerpriceComponent);
+    fixture = TestBed.createComponent(DataviewerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

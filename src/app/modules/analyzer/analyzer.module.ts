@@ -1,17 +1,21 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {PowerpriceComponent} from './components/powerprice/powerprice.component';
+import {DataviewerComponent} from './components/dataviewer/dataviewer.component';
+import { StatusviewerComponent } from './components/statusviewer/statusviewer.component';
 
 @NgModule({
   declarations: [
-    PowerpriceComponent
+    DataviewerComponent,
+    StatusviewerComponent
   ],
   imports: [
     CommonModule
   ],
   exports: [
-    PowerpriceComponent
+    DataviewerComponent,
+    StatusviewerComponent
   ]
 })
+
 export class AnalyzerModule {
 }
