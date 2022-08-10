@@ -44,7 +44,7 @@ export class DataviewerComponent implements OnInit {
         this.solarService.getSolarProductionHistory().subscribe((data) => {
           this.historic = data.reverse();
         })
-        this.unit = "units/time"
+        this.unit = "kWh/s"
         this.digitsInfo = "1.4-4"
         break;
       case SourceTypes.WATERINFLUX:

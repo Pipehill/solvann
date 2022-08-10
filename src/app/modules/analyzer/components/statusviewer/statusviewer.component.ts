@@ -28,7 +28,7 @@ export class StatusviewerComponent implements OnInit {
   }
 
   turbineStatus(status:number): string {
-    return status == 1 ? "Generating power" : status == -1 ? "Pumping" : "OFF";
+    return status == 1 ? "Generating power" : status == -1 ? "Pumping water" : "OFF";
   }
 
   turbineStatusColor(status:number): string {

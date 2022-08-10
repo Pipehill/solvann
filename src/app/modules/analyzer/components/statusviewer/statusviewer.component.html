@@ -2,8 +2,8 @@
   <h4>Current group status:</h4>
   <div><b>Name:</b> {{groupState.groupName}}</div>
   <div><b>Water level:</b> {{groupState.waterLevel | number}} meters</div>
-  <div><b>Money earned:</b> {{groupState.money | currency:'NOK'}}</div>
-  <div><b>Environmental cost:</b> {{groupState.environmentCost}}</div>
+  <div><b>Money earned:</b> {{groupState.money | currency:'NOK':'symbol':'1.0-0'}}</div>
+  <div><b>Environmental cost:</b> {{groupState.environmentCost | number}}</div>
   <hr>
 
   <h3>Turbines: </h3>
